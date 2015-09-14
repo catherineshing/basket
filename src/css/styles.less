@@ -1,0 +1,156 @@
+
+
+.main {
+    padding-top: 10px;
+    
+    /* Lists Summary Page */
+    .lists {
+        h4, .add {
+            display: inline-block;
+        }
+
+        .list-group {
+            margin-top: 5px;
+        }
+    }
+
+    /* List Detail Page */
+    .items {
+        .header {
+            height: 30px;
+
+            .back {
+                cursor: pointer;
+
+                i {
+                    padding-right: 5px;
+                    font-size: 12px;
+                }
+            }
+
+            .alert {
+                margin-left: 30%;
+                padding: 10px;
+            }
+        }
+
+        .panel-heading {
+            .panel-title {
+                display: inline-block;
+                cursor: pointer;
+                float: left;
+            }
+
+            .icons {
+                display: inline-block;
+            }
+
+            .shared {
+                clear: left;
+                padding-top: 2px;
+            }
+        }
+
+        .item {
+            /* View Mode */
+            cursor: pointer;
+
+            input[type="checkbox"] {
+                margin-right: 8px;
+                font-size: 20px;
+            }
+
+            .comment {
+                padding-left: 5px;
+            }
+
+            hr {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            /* Edit Mode */
+            .input-group {
+                margin-top: 10px;
+            }
+
+            .comment-edit textarea {
+                max-width: 100%;
+                max-height: 100px;
+            }
+
+            .assigned-user .radio {
+                display: inline-block;
+                padding-right: 15px;
+                margin-top: 3px;
+            }
+
+            .buttons span.btn {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .add i {
+        padding-right: 7px;
+    }
+}
+
+
+/* IE 8,9 compatibility */
+.ie8-9 {
+    i.glyphicon {
+        display: none;
+    }
+
+    .input-group {
+        .btn:before {
+            content: 'Save';
+        }
+    }
+
+    .items {
+        .icons {
+            .btn.users:before {
+                content: 'Add Users';
+            }
+
+            .btn.email:before {
+                content: 'Email List';
+            }
+
+            .btn.delete:before {
+                content: 'Delete List';
+            }
+        }
+
+        .item.edit .buttons {
+            .btn.delete:before {
+                content: 'Delete';
+            }
+
+            .btn.save:before {
+                content: 'Save';
+            }
+        }
+    }
+}
+
+:not(.ie8-9) {
+    .item.edit {
+        .name, .comment-edit {
+            label {
+                display: none !important;
+            }
+        }
+    }
+}
+
+
+/* XS screens */
+@media screen and (max-width: 768px) {
+    .item .comment {
+        padding-left: 15px !important;
+        padding-top: 5px;
+    }
+}

@@ -1,0 +1,105 @@
+.main {
+  padding-top: 10px;
+  /* Lists Summary Page */
+  /* List Detail Page */
+}
+.main .lists h4,
+.main .lists .add {
+  display: inline-block;
+}
+.main .lists .list-group {
+  margin-top: 5px;
+}
+.main .items .header {
+  height: 30px;
+}
+.main .items .header .back {
+  cursor: pointer;
+}
+.main .items .header .back i {
+  padding-right: 5px;
+  font-size: 12px;
+}
+.main .items .header .alert {
+  margin-left: 30%;
+  padding: 10px;
+}
+.main .items .panel-heading .panel-title {
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+}
+.main .items .panel-heading .icons {
+  display: inline-block;
+}
+.main .items .panel-heading .shared {
+  clear: left;
+  padding-top: 2px;
+}
+.main .items .item {
+  /* View Mode */
+  cursor: pointer;
+  /* Edit Mode */
+}
+.main .items .item input[type="checkbox"] {
+  margin-right: 8px;
+  font-size: 20px;
+}
+.main .items .item .comment {
+  padding-left: 5px;
+}
+.main .items .item hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.main .items .item .input-group {
+  margin-top: 10px;
+}
+.main .items .item .comment-edit textarea {
+  max-width: 100%;
+  max-height: 100px;
+}
+.main .items .item .assigned-user .radio {
+  display: inline-block;
+  padding-right: 15px;
+  margin-top: 3px;
+}
+.main .items .item .buttons span.btn {
+  margin-top: 10px;
+}
+.main .add i {
+  padding-right: 7px;
+}
+/* IE 8,9 compatibility */
+.ie8-9 i.glyphicon {
+  display: none;
+}
+.ie8-9 .input-group .btn:before {
+  content: 'Save';
+}
+.ie8-9 .items .icons .btn.users:before {
+  content: 'Add Users';
+}
+.ie8-9 .items .icons .btn.email:before {
+  content: 'Email List';
+}
+.ie8-9 .items .icons .btn.delete:before {
+  content: 'Delete List';
+}
+.ie8-9 .items .item.edit .buttons .btn.delete:before {
+  content: 'Delete';
+}
+.ie8-9 .items .item.edit .buttons .btn.save:before {
+  content: 'Save';
+}
+:not(.ie8-9) .item.edit .name label,
+:not(.ie8-9) .item.edit .comment-edit label {
+  display: none !important;
+}
+/* XS screens */
+@media screen and (max-width: 768px) {
+  .item .comment {
+    padding-left: 15px !important;
+    padding-top: 5px;
+  }
+}

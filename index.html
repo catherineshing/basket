@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<!--[if (IE 8)|(IE 9) ]><html lang="en" class="ie8-9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+
+        <title>Basket</title>
+
+        <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="./src/css/styles.css">
+
+        <!--[if lt IE 9]>
+            <script src="./lib/html5shiv/html5shiv.min.js"></script>
+            <script src="./lib/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        <div class="col-xs-12 main">
+            <div class="lists">
+                <h4>Lists</h4>
+                <span class="alert alert-success hidden"></span>
+                <div class="btn btn-primary add pull-right"><i class="glyphicon glyphicon-plus"></i>Add List</div>
+                <div class="list-group">
+                    <a href="#whole-foods" target="_self" class="list-group-item" data-list-id="whole-foods">
+                        <span class="title">Whole Foods</span>
+                        <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                    <a href="#safeway" target="_self" class="list-group-item" data-list-id="safeway">
+                        <span class="title">Safeway</span>
+                        <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                    <a href="#tailgate" target="_self" class="list-group-item" data-list-id="tailgate">
+                        <span class="title">Tailgate</span>
+                        <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="whole-foods" class="items hidden">
+                <div class="header">
+                    <span class="back" data-list-id="whole-foods"><i class="glyphicon glyphicon-chevron-left"></i>Back</span>
+                    <span class="alert alert-success hidden"></span>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" title="Edit Title">Whole Foods</h3>
+                        <div class="icons pull-right">
+                            <span class="btn btn-default users" data-toggle="modal" data-target="#users-modal" title="Add Users"><i class="glyphicon glyphicon-user"></i></span>
+                            <span class="btn btn-default email" data-toggle="modal" data-target="#email-modal" title="Email List"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <span class="btn btn-danger delete" data-list-id="whole-foods" title="Delete List"><i class="glyphicon glyphicon-trash"></i></span>
+                        </div>
+                        <div class="shared text-muted">
+                            <span>Shared with: </span>
+                            <span class="users"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Celery</span>
+                                    <span class="comment text-muted hidden-xs">For the veggie tray</span>
+                                </div>
+                                <div class="col-xs-2 user text-right">Colin</div>
+                                <div class="col-xs-12 comment text-muted visible-xs">For the veggie tray</div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Carrots</span>
+                                    <span class="comment text-muted hidden-xs">For Bernie</span>
+                                </div>
+                                <div class="col-xs-2 user text-right">Patrick</div>
+                                <div class="col-xs-12 comment text-muted visible-xs">For Bernie</div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Ranch</span>
+                                    <span class="comment text-muted hidden-xs">Hidden Valley</span>
+                                </div>
+                                <div class="col-xs-2 user text-right">Frank</div>
+                                <div class="col-xs-12 comment text-muted visible-xs">Hidden Valley</div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item new">
+                                <div class="col-xs-12 add text-muted">
+                                    <i class="glyphicon glyphicon-plus"></i>Add Item
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="safeway" class="items hidden">
+                <div class="header">
+                    <span class="back" data-list-id="safeway"><i class="glyphicon glyphicon-chevron-left"></i>Back</span>
+                    <span class="alert alert-success hidden"></span>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" title="Edit Title">Safeway</h3>
+                        <div class="icons pull-right">
+                            <span class="btn btn-default users" data-toggle="modal" data-target="#users-modal" title="Add Users"><i class="glyphicon glyphicon-user"></i></span>
+                            <span class="btn btn-default email" data-toggle="modal" data-target="#email-modal" title="Email List"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <span class="btn btn-danger delete" data-list-id="safeway" title="Delete List"><i class="glyphicon glyphicon-trash"></i></span>
+                        </div>
+                        <div class="shared text-muted">
+                            <span>Shared with: </span>
+                            <span class="users"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Tortilla Chips</span>
+                                    <span class="comment text-muted hidden-xs">Tostitos scoops or hint of lime</span>
+                                </div>
+                                <div class="col-xs-2 user text-right">Frank</div>
+                                <div class="col-xs-12 comment text-muted visible-xs">Tostitos scoops or hint of lime</div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Salsa</span>
+                                    <span class="comment text-muted hidden-xs"></span>
+                                </div>
+                                <div class="col-xs-2 user text-right"></div>
+                                <div class="col-xs-12 comment text-muted visible-xs"></div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item new">
+                                <div class="col-xs-12">
+                                    <input type="checkbox">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tailgate" class="items hidden">
+                <div class="header">
+                    <span class="back" data-list-id="tailgate"><i class="glyphicon glyphicon-chevron-left"></i>Back</span>
+                    <span class="alert alert-success hidden"></span>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" title="Edit Title">Tailgate</h3>
+                        <div class="icons pull-right">
+                            <span class="btn btn-default users" data-toggle="modal" data-target="#users-modal" title="Add Users"><i class="glyphicon glyphicon-user"></i></span>
+                            <span class="btn btn-default email" data-toggle="modal" data-target="#email-modal" title="Email List"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <span class="btn btn-danger delete" data-list-id="tailgate" title="Delete List"><i class="glyphicon glyphicon-trash"></i></span>
+                        </div>
+                        <div class="shared text-muted">
+                            <span>Shared with: </span>
+                            <span class="users"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Hot dogs</span>
+                                    <span class="comment text-muted hidden-xs">At least 12</span>
+                                </div>
+                                <div class="col-xs-2 user text-right">Patrick</div>
+                                <div class="col-xs-12 comment text-muted visible-xs">At least 12</div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Hot dog buns</span>
+                                    <span class="comment text-muted hidden-xs">Get some gluten-free ones too, just in case</span>
+                                </div>
+                                <div class="col-xs-2 user text-right"></div>
+                                <div class="col-xs-12 comment text-muted visible-xs">Get some gluten-free ones too, just in case</div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Hamburger patties</span>
+                                    <span class="comment text-muted hidden-xs"></span>
+                                </div>
+                                <div class="col-xs-2 user text-right"></div>
+                                <div class="col-xs-12 comment text-muted visible-xs"></div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Hamburger buns</span>
+                                    <span class="comment text-muted hidden-xs"></span>
+                                </div>
+                                <div class="col-xs-2 user text-right"></div>
+                                <div class="col-xs-12 comment text-muted visible-xs"></div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Lettuce</span>
+                                    <span class="comment text-muted hidden-xs"></span>
+                                </div>
+                                <div class="col-xs-2 user text-right"></div>
+                                <div class="col-xs-12 comment text-muted visible-xs"></div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Tomatoes</span>
+                                    <span class="comment text-muted hidden-xs"></span>
+                                </div>
+                                <div class="col-xs-2 user text-right"></div>
+                                <div class="col-xs-12 comment text-muted visible-xs"></div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item">
+                                <div class="col-xs-10">
+                                    <input type="checkbox" title="Mark Completed">
+                                    <span class="name" title="Edit Item">Ketchup</span>
+                                    <span class="comment text-muted hidden-xs"></span>
+                                </div>
+                                <div class="col-xs-2 user text-right"></div>
+                                <div class="col-xs-12 comment text-muted visible-xs"></div>
+                                <div class="col-xs-12"><hr/></div>
+                            </li>
+                            <li class="row item new">
+                                <div class="col-xs-12">
+                                    <input type="checkbox">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Users Modal -->
+        <div id="users-modal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Share with:</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="Anquan">Anquan</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="Carlos">Carlos</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="Colin" checked>Colin</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="Frank">Frank</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="Patrick" checked>Patrick</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="Vernon">Vernon</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Modal -->
+        <div id="email-modal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Email to:</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="email" class="form-control" autofocus="true" placeholder="Email">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="./lib/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="./src/js/script.js"></script>
+    </body>
+</html>
